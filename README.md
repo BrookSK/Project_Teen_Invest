@@ -22,10 +22,11 @@ To learn more about the project, contact: lucasrvacari9@gmail.com
 
 Contributing Persons:
 
+Ryan: https://github.com/zProgrammerZ
 João Pedro: https://github.com/JoaoPP4
 
 Project Developers:
 
 Lucas Vacari: https://github.com/BrookSK
-Lucas Mendes: 
-Guilherme: 
+Lucas Mendes: https://github.com/M4lakoi
+Guilherme: https://github.com/Zanetti-Creator
