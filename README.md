@@ -20,6 +20,10 @@ Project help:
 
 To learn more about the project, contact: lucasrvacari9@gmail.com
 
+Contributing Persons:
+
+João Pedro: https://github.com/JoaoPP4
+
 Project Developers:
 
 Lucas Vacari: https://github.com/BrookSK
