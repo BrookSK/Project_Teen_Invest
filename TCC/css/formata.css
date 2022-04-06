@@ -61,6 +61,8 @@ textarea:focus {
     cursor: pointer  /*Formatando quando passa o mouse em cima*/
 }
 
+
+
 .card {
     border-radius: 10px;
     padding: 35px 26px;

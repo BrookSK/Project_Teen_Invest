@@ -74,7 +74,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="Cursos.php">
                                     <span data-feather="book-open"></span>
                                     Cursos
                                 </a>
