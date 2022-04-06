@@ -111,3 +111,8 @@ body {
 .sairMouse:hover{
   color: #fff;
 }
+
+.txtCurso{
+    font-family: "sen-bold";
+    font-size: 35px;
+}
