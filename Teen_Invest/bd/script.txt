@@ -1,0 +1,13 @@
+create database edfinanceira;
+use edfinanceira;
+
+create table tb_usuario(
+id_usuario int not null auto_increment primary key,
+primeironome_usuario varchar(45) not null,
+ultimonome_usuario varchar(45) not null,
+cpf_usuario varchar(15) unique,
+email_usuario varchar(60) unique not null,
+nascimento_usuario date,
+telefone_usuario varchar(30),
+senha_usuario varchar(60) not null
+);
