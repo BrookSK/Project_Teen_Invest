@@ -63,8 +63,10 @@ if($con==true){
             $_SESSION["n"]=$dados["nascimento_usuario"];
             $_SESSION["t"]=$dados["telefone_usuario"];
             $_SESSION["s"]=$dados["senha_usuario"];
-
+            $_SESSION["tipo"]=$dados["tipo"];
+            
             header("Location: ../menu.php");
+
             /*?>
                 <script>
                     window.location.href = "../menu.php";

@@ -110,7 +110,7 @@
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
             <h2>Teen Invest</h2>
-            <h3>Um lugar que te ajuda a se interessar e a enteder o que sobre investimentos e o que pode fazer com seu dineiro.</h3>
+            <h3>Um lugar que te ajuda a se interessar e a enteder sobre investimentos e o que pode fazer com seu dinheiro.</h3>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
             <p>
@@ -148,8 +148,8 @@
             <div class="row">
               <div class="col-md-6 d-flex align-items-stretch">
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="icon"><i class="bx bx-file"></i></div>
-                  <h4><a href="./paginas/Login.php">Materiais de Apoio.</a></h4>
+                  <div class="icon"><i class="bi bi-bar-chart-line"></i></div>
+                  <h4><a href="./paginas/Login.php">Simulador</a></h4>
                   <p>Alguns materiais de apoio que podem te ajudar a estudar para você poder baixar.</p>
                 </div>
               </div>
@@ -166,7 +166,7 @@
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
                   <div class="icon"><i class="bx bx-info-circle"></i></div>
                   <h4><a href="./paginas/Login.php">Informações</a></h4>
-                  <p>Aqui você vai encontar tudo o que você quer saber para ter uma educação financeira melhor</p>
+                  <p>Aqui você vai encontrar tudo o que você quer saber para ter uma educação financeira melhor.</p>
                 </div>
               </div>
 
@@ -241,8 +241,8 @@
                     <h4>Guilherme</h4>
                     <span>Aluno do 3º  de Desenvolvimento de Sistemas</span>
                     <div class="social">
-                      <a href=""><i class="ri-twitter-fill"></i></a>
-                      <a href=""><i class="ri-instagram-fill"></i></a>
+                      <a href="https://twitter.com/"><i class="ri-twitter-fill"></i></a>
+                      <a href="https://www.instagram.com/oficial_zanetti/"><i class="ri-instagram-fill"></i></a>
                       <a href="https://github.com/Zanetti-Creator"><i class="ri-github-fill"></i></a>
                       <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                     </div>

@@ -33,13 +33,40 @@ $sc=$_POST["senhac"];
 include ("../../bd/conexao.php");
 
 /*2-definindo o comando sql a ser usado */
-$comandoSql="insert into tb_usuario(primeironome_usuario, ultimonome_usuario, email_usuario,senha_usuario)values('$pn','$un','$e','$s')";
+$comandoSql1="insert into tb_usuario(primeironome_usuario, ultimonome_usuario, email_usuario,senha_usuario)values('$pn','$un','$e','$s')";
 
 /*3-executando o comando sql */ 
-$resultado = mysqli_query($con, $comandoSql);
-
 /*4-conferindo se o registro foi inserido*/  
-if($resultado==true){
+ if( mysqli_query($con, $comandoSql1) != true ){
+
+    echo '<script>f_mostraNaoDeu();</script>';
+    ?>
+        <script>
+	        window.location.href = "../CriarConta.php";
+	    </script>
+	<?php
+ }
+
+/*5-selecionando e pegando os dados que foram inseridos*/
+$comandoSql2="select * from tb_usuario where email_usuario='$e' and senha_usuario='$s'";
+
+/*6-conferendo tudo que foi inserido e colocando em uma variavel*/
+$resultado = mysqli_query($con, $comandoSql2);
+
+/*7-passando os dados inseridos para a secao*/
+if($dados=mysqli_fetch_assoc($resultado)){
+
+    session_start();
+
+    $_SESSION["id"]=$dados["id_usuario"];
+    $_SESSION["pn"]=$dados["primeironome_usuario"];
+    $_SESSION["un"]=$dados["ultimonome_usuario"];
+    $_SESSION["e"]=$dados["email_usuario"];
+    $_SESSION["cpf"]=$dados["cpf_usuario"];
+    $_SESSION["n"]=$dados["nascimento_usuario"];
+    $_SESSION["t"]=$dados["telefone_usuario"];
+    $_SESSION["s"]=$dados["senha_usuario"];
+    $_SESSION["tipo"]=$dados["tipo"];
 
     //include "teste.php";
     //var_dump($_SESSION);
@@ -49,14 +76,6 @@ if($resultado==true){
     //exit;
     
     //echo '<script>f_mostraDeu();</script>';
-    header("Location: ../menu.php");
 
-} else{
-    
-    echo '<script>f_mostraNaoDeu();</script>';
-    ?>
-        <script>
-	        window.location.href = "../CriarConta.php";
-	    </script>
-	<?php
+    header("Location: ../menu.php");
 }

@@ -61,16 +61,38 @@
         $_SESSION["t"]=$t;
         $_SESSION["s"]=$s;
 
+        /*5-selecionando e pegando os dados que foram inseridos*/
+        $comandoSql2="select * from tb_usuario where id_usuario=" . $_SESSION['id'];
+
+        /*6-conferendo tudo que foi inserido e colocando em uma variavel*/
+        $resultado = mysqli_query($con, $comandoSql2);
+
+        /*7-passando os dados inseridos para a secao*/
+        if($dados=mysqli_fetch_assoc($resultado)){
+
+            $_SESSION["tipo"]=$dados["tipo"];
+
+            //include "teste.php";
+            //var_dump($_SESSION);
+            //var_dump($bd);
+            //var_dump($pn, $un, $e, $cpf, $n, $t, $s);
+            //var_dump($resultado);
+            //exit;
+            
+            //echo '<script>f_mostraDeu();</script>';
+
+        }
+
     } else{
 
         var_dump($_SESSION);
         exit;
 
         echo '<script>f_mostraNaoDeu();</script>';
-    ?>
-        <!--<script>
-            window.location.href = "../menu.php";
-        </script>-->
-    <?php
+        ?>
+            <!--<script>
+                window.location.href = "../menu.php";
+            </script>-->
+        <?php
     }
 ?>

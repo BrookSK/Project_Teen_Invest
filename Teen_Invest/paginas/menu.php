@@ -106,19 +106,13 @@ session_start();
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="informações.php">
                                     <span data-feather="info"></span>
                                     Informações
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="edit"></span>
-                                    Materiais de Apoio
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="./noticias.php">
                                     <span data-feather="help-circle"></span>
                                     Notícias
                                 </a>
@@ -148,7 +142,7 @@ session_start();
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
                                     <span data-feather="code"></span>
-                                    Criadores
+                                    Sobre nós
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -163,16 +157,79 @@ session_start();
 
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1 class="h2">Resumo do Aprendizado</h1>
+                        <h1 class="h2">Gráfico das Principais Cotações</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-sm btn-outline-secondary btnGraf">
-                                <span data-feather="calendar"></span>
-                                Esta Semana
-                            </button>
                         </div>
                     </div>
 
-                    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                    <div id="tradingview_92ea6"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/symbols/BTCUSD/?exchange=COINBASE" rel="noopener" target="_blank"><span class="blue-text">Bitcoin/USD</span></a> por TradingView</div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                    new TradingView.MediumWidget(
+                    {
+                    "symbols": [
+                        [
+                        "Bitcoin/USD",
+                        "COINBASE:BTCUSD|1D"
+                        ],
+                        [
+                        "Ethereum",
+                        "COINBASE:ETHUSD|1D"
+                        ],
+                        [
+                        "Netflix",
+                        "NASDAQ:NFLX|1D"
+                        ],
+                        [
+                        "Apple",
+                        "NASDAQ:AAPL|1D"
+                        ],
+                        [
+                        "Nvidia",
+                        "NASDAQ:NVDA|1D"
+                        ],
+                        [
+                        "Google",
+                        "NASDAQ:GOOGL|1D"
+                        ],
+                        [
+                        "Tesla",
+                        "NASDAQ:TSLA|1D"
+                        ],
+                        [
+                        "Petróleo ",
+                        "EUREX:PBRF1!|1D"
+                        ]
+                    ],
+                    "chartOnly": false,
+                    "width": "100%",
+                    "height": "480",
+                    "locale": "br",
+                    "colorTheme": "light",
+                    "gridLineColor": "rgba(0, 0, 0, 0)",
+                    "fontColor": "rgba(0, 0, 0, 1)",
+                    "isTransparent": false,
+                    "autosize": true,
+                    "showVolume": false,
+                    "scalePosition": "right",
+                    "scaleMode": "Normal",
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                    "noTimeScale": false,
+                    "valuesTracking": "1",
+                    "chartType": "area",
+                    "lineColor": "#2962ff",
+                    "topColor": "rgba(41, 98, 255, 0.3)",
+                    "bottomColor": "rgba(41, 98, 255, 0)",
+                    "lineWidth": 2,
+                    "container_id": "tradingview_92ea6"
+                    }
+                    );
+                    </script>
+                    </div>
+                    <!-- TradingView Widget END -->
 
                     <h2>Principais Cotações</h2>
                     <div class="table-responsive">
@@ -181,8 +238,8 @@ session_start();
                                 <tr>
                                     <th>ATIVO</th>
                                     <th>NOME</th>
-                                    <th>VAL. COMPRA</th>
-                                    <th>VAL. VENDA</th>
+                                    <th>VAL. COMPRA(R$)</th>
+                                    <th>VAL. VENDA(R$)</th>
                                     <th>VARIAÇÃO(%)</th>
                                 </tr>
                             </thead>
@@ -300,21 +357,10 @@ session_start();
                                 </tr>
                             </tbody>
                         </table>
-                        <h6 class="hgFinance">Dados retirados de <a class="hgFinance" href="https://hgbrasil.com/status/finance">HG-Finance</a></h6>
+                        <div class="tradingview-widget-copyright">Dados retirados de <a href="https://hgbrasil.com/status/finance" rel="noopener" target="_blank"><span class="blue-text">HG-Finance</span></a></div>
                     </div>
                     <hr>
-                    <footer class="text-muted py-5">
-                        <div class="container">
-                            <p class="float-end mb-1">
-                                <a href="#">Voltar para cima</a>
-                                <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-                            </p>
-                            <p class="mb-1">
-                                &copy; Copyright <span>Teen Invest</span>. Todos os direitos reservados
-                            </p>
-                        </div>
-                    </footer>
+                    <?php include "./View/template.php"; ?>
                 </main>
             </div>
         </div>

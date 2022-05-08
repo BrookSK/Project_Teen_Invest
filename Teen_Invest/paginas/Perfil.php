@@ -20,26 +20,35 @@ session_start();
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--adicionando uma ligacao com o site para pegar icones-->
+    <script src="https://kit.fontawesome.com/894395ce28.js" crossorigin="anonymous"></script>
+   <style type="text/css">
+       .icone{margin-top: 40px;}
+      
+   </style>
+    
 </head>
 
 <div class="container">
     <div class="row">
         <div class="col-sm-10">
-            <h1>Meu Perfil</h1>
+            
+        <center><img src="../Img/Icones/user_1.png" alt="Icone" width="64px" height="64px" class="icone"><h1>Meu Perfil</h1></center>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row">     
 
         <!--/col-3-->
         <div class="col-sm-9">
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab">Dados do Usuário</a></li>
+            <ul class="nav">
+                <h4><li class="active"><a data-toggle="tab">Dados do Usuário</a></li></h4>
             </ul>
 
             <div class="tab-content">
                 <div class="tab-pane active" id="home">
-                    <hr>
+                    
                     <form name="Perfil" class="form" action="validacoes/passaDados.php" method="POST" id="registrationForm">
                         <div class="form-group">
 
@@ -116,7 +125,6 @@ session_start();
                             <div class="col-xs-12">
                                 <br>
                                 <input type="submit" name="alterar" class="btn btn-primary" value="Salvar alterações"></input>
-                                <input type="reset" name="limpar" class="btn btn-secondary" value="Limpar alterações"></input>
                                 <?php
                                     echo "<a type='button' name='excluir' class='btn btn-danger' href=validacoes/excluiConta.php?id={$_SESSION["id"]}>Excluir conta</a>";
                                 ?>

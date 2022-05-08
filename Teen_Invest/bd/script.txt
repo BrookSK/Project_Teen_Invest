@@ -9,5 +9,24 @@ cpf_usuario varchar(15) unique,
 email_usuario varchar(60) unique not null,
 nascimento_usuario date,
 telefone_usuario varchar(30),
-senha_usuario varchar(60) not null
+senha_usuario varchar(60) not null,
+tipo varchar(5)
 );
+
+create table tb_cursos(
+id_curos int not null auto_increment primary key,
+nome_cursos varchar(100) not null,
+descricao_cursos varchar(255) not null,
+preco_cursos varchar(50) not null,
+link_cursos varchar(2083) not null
+);
+
+create table tb_noticias(
+id_noticias int not null auto_increment primary key,
+titulo_noticias varchar(100) not null,
+descricao_noticias varchar(255) not null,
+autor_noticias varchar(100) not null,
+link_noticias varchar(2083) not null
+);
+
+insert into tb_usuario(primeironome_usuario, ultimonome_usuario, email_usuario, senha_usuario, tipo)values('Lucas', 'Vacari', 'lucasrvacari9@gmail.com', '1234', 'admin');
