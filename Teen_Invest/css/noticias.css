@@ -44,3 +44,11 @@ img{
 .container-fluid{
     width: 90%;
 }
+
+.btnCadastra:hover{
+    background-color: #2055A6;
+}
+
+.btnGraf:hover{
+    background-color: #2055A6;
+}

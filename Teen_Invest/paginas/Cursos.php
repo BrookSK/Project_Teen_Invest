@@ -134,14 +134,14 @@
                 <input type="file" name="imagem" />
               </div>
               <div class="mt-4 proceed">
-                <button class="btn btn-cor text-center" name="cadastrar" value="cadastrar">
+              <button class="btn btn-cor text-center btn-outline-secondary btnGraf" name="cadastrar" value="cadastrar">
                   <div class="text-right">
                     <span>
                       Cadastrar Curso
                     </span>
                   </div>
                 </button>
-              </div>
+              </div><br>
           </form>
         </div>
       <?php
@@ -188,11 +188,7 @@
                           ?>
                         </a>
                       </div>
-                      <small class="<?php if (is_numeric($preco) == true) { ?> text txtValor<?php } else { ?> text txtGratis<?php } ?>"><?php if (is_numeric($preco) == true) {
-                                                                                                                                          echo 'R$ ' . $preco;
-                                                                                                                                        } else {
-                                                                                                                                          echo $preco;
-                                                                                                                                        } ?></small>
+                      <small class="<?php if (is_numeric($preco) == true) { ?> text txtValor<?php } else { ?> text txtGratis<?php } ?>"><?php if (is_numeric($preco) == true) {echo 'R$ ' . $preco;} else {echo $preco;} ?></small>
                     </div>
                   </div>
               </div>

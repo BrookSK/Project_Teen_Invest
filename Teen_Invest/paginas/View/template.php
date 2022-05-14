@@ -72,7 +72,7 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="../paginas/politicas/privacidade.php">Políticas de Privacidade</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="../paginas/politicas/termos.php">Termos de uso</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="../paginas/suporte.php">Suporte</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../paginas/creditos.php">Créditos</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../paginas/Creditos.php">Créditos</a></li>
                         </ul>
                     </div>
 

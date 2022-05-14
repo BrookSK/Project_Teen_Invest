@@ -99,7 +99,7 @@
                         <input type="file" name="imagem" />
                     </div>
                     <div class="mt-4 proceed">
-                        <button class="btn btn-cor text-center" name="cadastrar" value="cadastrar">
+                        <button class="btn btn-outline-primary btnGraf" name="cadastrar" value="cadastrar">
                             <div class="text-right">
                                 <span>
                                     Cadastrar Notícia
