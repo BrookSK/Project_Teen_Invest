@@ -7,20 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícias</title>
     <link rel="icon" href="../Img/icones/favicon_io/favicon.ico">
-    
+
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/menu.css" rel="stylesheet">
-    
+
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <script src="../js/bootstrap.js"></script>
     <link href="../css/noticias.css" rel="stylesheet" />
-    
-    <!-- Template Main CSS File -->
-    <link href="../css/style.css" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="../vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,9 +28,12 @@
     $NewsDataBTC = json_decode($responseBTC);
 
     ?>
-    <div class="jumbotron">
-        <h1>Principais Notícias do dia a dia</h1>
-    </div>
+
+    <section id="hero">
+        <div class="jumbotron">
+            <h1>Principais Notícias do dia a dia</h1>
+        </div>
+    </section>
 
     <!-- 
     <div class="container-fluid">
@@ -81,7 +78,7 @@
                 <h3>Cadastrar Notícia</h3>
             </div>
 
-            <form class="container-fluid" name="CadastraNoticia" action="validacoes/cadastraNoticia.php" method="POST" enctype="multipart/form-data">
+            <form class="container-fluid" name="CadastraNoticia" action="validacoes/cadastraNoticia.php" method="POST">
 
                 <div class="form mt-3">
                     <div>
@@ -94,12 +91,8 @@
                     <div>
                         <input type="text" class="form-control" placeholder="Link da Publicação" name="link" required="required">
                     </div><br>
-                    <div>
-                        <label for="imagem">Imagem:</label>
-                        <input type="file" name="imagem" />
-                    </div>
                     <div class="mt-4 proceed">
-                        <button class="btn btn-cor text-center" name="cadastrar" value="cadastrar">
+                        <button class="btn btn-outline-primary btnGraf" name="cadastrar" value="cadastrar">
                             <div class="text-right">
                                 <span>
                                     Cadastrar Notícia
@@ -132,13 +125,12 @@
             $descricao = $dados["descricao_noticias"];
             $autor = $dados["autor_noticias"];
             $link = $dados["link_noticias"];
-            $img = $dados["img_noticias"];
 
         ?>
 
             <div class="row NewsGrid">
                 <div class="col-md-3">
-                <?php echo '<img src="../Img/noticias/'.$dados['img_noticias'].'" alt="News Thumbnail" class="rounded">' ?>
+                    <img src="<?php //echo $News->urlToImage ?>" alt="News Thumbnail" class="rounded">
                 </div>
                 <div class="col-md-9">
                     <h2><?php echo $titulo ?></h2>
@@ -146,13 +138,13 @@
                     <p><?php echo $descricao ?></p>
                     <h6><?php echo $autor ?></h6>
                     <?php
-                    echo "<a href=$link> Ler Mais... </a>";
-                    ?>
-                    &nbsp;
-                    <?php
-                    if ($_SESSION["tipo"] == "admin") {
-                        echo "<a type='button' name='excluir' class='btn btn-outline-danger' href=validacoes/excluiNoticias.php?id={$_SESSION["id_noticias"]}>Excluir notícia</a>";
-                    }
+                        echo "<a href=$link> Ler Mais... </a>";
+                        ?>
+                        &nbsp;
+                        <?php
+                        if ($_SESSION["tipo"] == "admin") {
+                            echo "<a type='button' name='excluir' class='btn btn-outline-danger' href=validacoes/excluiNoticias.php?id={$_SESSION["id_noticias"]}>Excluir notícia</a>";
+                        }
                     ?>
                 </div>
             </div>
@@ -184,7 +176,17 @@
         }
         ?>
     </div>
-    <?php include "./View/template.php"; ?>
+
+    <footer class="text-muted py-5">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#hero">Voltar para cima</a>
+            </p>
+            <p class="mb-1"> &copy; Bootstrap</p>
+
+        </div>
+    </footer>
+
 </body>
 
 </html>
