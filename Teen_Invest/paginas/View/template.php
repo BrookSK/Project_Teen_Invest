@@ -10,6 +10,21 @@
     <!-- Favicons -->
     <link rel="icon" href="../../Img/icones/favicon_io/favicon.ico">
 
+    <style>
+        .testeutil {
+            font-size: 28px;
+        }
+
+        .emailteste {
+            font-size: 15px;
+        }
+
+        .linka {
+            color: #2055a6;
+            text-decoration: none;
+        }
+    </style>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -38,13 +53,13 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Teen Invest</h3>
+                        <h3 class="testeutil">Teen Invest</h3>
                         <p>
                             Etec Philadelpho Gouvea Netto <br>
                             São José do Rio Preto, 15035-010 <br>
                             Avenida dos Estudantes, Nº3278<br>
                             Brasil <br><br>
-                            <strong>Emails:</strong><br>
+                            <strong class="emailteste">Emails:</strong><br>
                             lucas.vacari@etec.sp.gov.br<br>
                             lucas.campagna@etec.sp.gov.br<br>
                             guilherme.zanetti@etec.sp.gov.br<br>
@@ -53,22 +68,22 @@
 
                     <div class="col-lg-2 col-md-6 footer-links">
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/suporte/perguntas.php">Perguntas frequentes</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/politicas/privacidade.php">Políticas de Privacidade</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/politicas/termos.php">Termos de uso</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/suporte.php">Suporte</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/creditos.php">Créditos</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../paginas/suporte/perguntas.php">Perguntas frequentes</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../paginas/politicas/privacidade.php">Políticas de Privacidade</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../paginas/politicas/termos.php">Termos de uso</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../paginas/suporte.php">Suporte</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../paginas/creditos.php">Créditos</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-2 col-md-6 footer-links">
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../#about">Sobre</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../#services">Serviços</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../#team">Criadores</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/Login.php">Faça login</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/CriarConta.php">Crie sua conta</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../#about">Sobre</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../#services">Serviços</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../#team">Criadores</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../paginas/Login.php">Faça login</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../paginas/CriarConta.php">Crie sua conta</a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,14 +94,14 @@
 
             <div class="me-md-auto text-center text-md-start">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>Teen Invest</span></strong>. Todos os direitos reservados
+                    &copy; Copyright <strong><span class="emailteste">Teen Invest</span></strong>. Todos os direitos reservados
                 </div>
                 <div class="credits">
                     <!-- All the links in the footer should remain intact. -->
                     <!-- You can delete the links only if you purchased the pro version. -->
                     <!-- Licensing information: https://bootstrapmade.com/license/ -->
                     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/ -->
-                    Projetado por <a href="https://bootstrapmade.com/">BootstrapMade</a>. Editado por <a href="../../#team">Teen Invest</a>
+                    Projetado por <a class="linka" href="https://bootstrapmade.com/">BootstrapMade</a>. Editado por <a class="linka" href="../../#team">Teen Invest</a>
                 </div>
 
     </footer><!-- End Footer -->

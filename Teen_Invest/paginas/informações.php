@@ -34,6 +34,14 @@
         font-size: 23px;
       }
     }
+
+    .fundoE {
+      background: #ffffff;
+    }
+
+    .fundoT {
+      background: #f8f9fa;
+    }
   </style>
   <link href="../css/informações.css" rel="stylesheet">
 
@@ -63,7 +71,7 @@
 
   </header>
 
-  <main>
+  <main class="fundoT">
 
     <section class="py-5 text-center container" style="width: 100%;">
       <div class="row py-lg-5">
@@ -74,7 +82,7 @@
       </div>
     </section>
 
-    <div class="album py-5 bg-light">
+    <div class="album py-5 fundoE">
       <div class="container">
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -402,18 +410,7 @@
     </div>
 
   </main>
-
-  <footer class="text-muted py-5">
-    <div class="container">
-      <p class="float-end mb-1">
-        <a href="#">Voltar para cima</a>
-      </p>
-      <p class="mb-1"> &copy; Bootstrap</p>
-
-    </div>
-  </footer>
-
-
+  <?php include "./View/template.php"; ?>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
 

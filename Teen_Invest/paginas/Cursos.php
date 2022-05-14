@@ -35,13 +35,19 @@
       }
     }
 
-
     strong {
       font-family: "Poppins", sans-serif;
       font-size: 23px;
     }
-  </style>
 
+    .fundoE {
+      background: #ffffff;
+    }
+
+    .fundoT {
+      background: #f8f9fa;
+    }
+  </style>
 
   <!-- Bootstrap core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -49,11 +55,17 @@
   <link href="../css/menu.css" rel="stylesheet">
   <link href="../css/cursos.css" rel="stylesheet">
 
-
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/aos/aos.css" rel="stylesheet">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 </head>
 
 <body>
-
   <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="menu.php">
       <img src="../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
@@ -77,22 +89,19 @@
         </a>
       </li>
     </ul>
-
   </header>
 
-  <main>
-
+  <main class="fundoT">
     <section class="py-5 text-center container" style="width: 100%;">
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
           <h1 class="txtCurso">Cursos</h1>
           <p class="lead text-muted">Alguns cursos para você que quer aprender mais sobre educação financeira!</p>
-
         </div>
       </div>
     </section>
 
-    <div class="album py-5 bg-light">
+    <div class="fundoE album py-5">
       <?php
 
       session_start();
@@ -103,9 +112,7 @@
           <div class="text-center">
             <h3>Cadastrar Curso</h3>
           </div>
-
-          <form name="CadastraCurso" action="validacoes/cadastraCursos.php" method="POST">
-
+          <form name="CadastraCurso" action="validacoes/cadastraCursos.php" method="POST" enctype="multipart/form-data">
             <div class="form mt-3">
               <div>
                 <input type="text" placeholder="Nome do curso" class="form-control" name="nomeCurso" required="required"><br>
@@ -122,6 +129,10 @@
               <div>
                 <input type="text" class="form-control" placeholder="Link da Publicação" name="link" required="required">
               </div><br>
+              <div>
+                <label for="imagem">Imagem:</label>
+                <input type="file" name="imagem" />
+              </div>
               <div class="mt-4 proceed">
                 <button class="btn btn-cor text-center" name="cadastrar" value="cadastrar">
                   <div class="text-right">
@@ -157,13 +168,12 @@
             $descricao = $dados["descricao_cursos"];
             $preco = $dados["preco_cursos"];
             $link = $dados["link_cursos"];
+            $img = $dados["img_cursos"];
 
           ?>
-
             <div class="col">
               <div class="card shadow-sm">
-                <center><img src="../Img/cursos/FGV.png" width="70%" height="70%" alt="FGV">
-
+                <center><?php echo '<img src="../Img/cursos/' . $dados['img_cursos'] . '" width="70%" height="70%" alt="">'; ?>
                   <div class="card-body">
                     <p class="card-text txtValor"> <?php echo $nome ?></p>
                     <p><?php echo $descricao ?></p>
@@ -178,7 +188,11 @@
                           ?>
                         </a>
                       </div>
-                      <small class="<?php if (is_numeric($preco) == true) { ?> text txtValor<?php } else { ?> text txtGratis<?php } ?>"><?php if (is_numeric($preco) == true) {echo 'R$ ' . $preco;} else {echo $preco;} ?></small>
+                      <small class="<?php if (is_numeric($preco) == true) { ?> text txtValor<?php } else { ?> text txtGratis<?php } ?>"><?php if (is_numeric($preco) == true) {
+                                                                                                                                          echo 'R$ ' . $preco;
+                                                                                                                                        } else {
+                                                                                                                                          echo $preco;
+                                                                                                                                        } ?></small>
                     </div>
                   </div>
               </div>
@@ -186,7 +200,6 @@
           <?php
           }
           ?>
-
           <div class="col">
             <div class="card shadow-sm">
               <center><img src="../Img/cursos/FGV.png" width="70%" height="70%" alt="FGV">
@@ -212,9 +225,7 @@
           </div>
           <div class="col">
             <div class="card shadow-sm">
-
               <center><img src="../Img/cursos/Bradesco.png" width="70%" height="70%" alt="Fundação Bradesco">
-
                 <div class="card-body">
                   <p class="card-text txtValor">Fundação Bradesco – Educação Financeira</p>
                   <p>Público-alvo: Iniciantes<br>Carga horária: 4 horas<br>
@@ -248,8 +259,6 @@
                 </div>
             </div>
           </div>
-
-
           <div class="col">
             <div class="card shadow-sm">
               <center><img src="../Img/cursos/Lumina.png" width="70%" height="70%" alt="Lúmina">
@@ -384,32 +393,9 @@
         </div>
       </div>
     </div>
-
   </main>
-
-  <footer class="text-muted py-5">
-    <div class="container">
-      <p class="float-end mb-1">
-        <a href="#">Voltar para cima</a>
-      </p>
-      <p class="mb-1"> &copy; Bootstrap</p>
-
-      <?php
-      //var_dump($dados);
-      //var_dump($id);
-      //var_dump($nome);
-      //var_dump($descricao);
-      //var_dump($link);
-      //var_dump($preco);
-      ?>
-
-    </div>
-  </footer>
-
-
+  <?php include "./View/template.php"; ?>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-
 </body>
 
 </html>

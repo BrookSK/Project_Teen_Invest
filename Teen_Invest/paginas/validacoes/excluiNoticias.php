@@ -22,6 +22,8 @@
 
 <?php
 
+session_start();
+
 /*1-definindo a conexao -local, usuario, senha e banco de dados*/
 include ("../../bd/conexao.php");
 
