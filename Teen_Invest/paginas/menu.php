@@ -150,19 +150,19 @@ session_start();
                             ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="./suporte.php">
                                 <span data-feather="help-circle"></span>
                                 Suporte
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="./sobre_nos.php">
                                 <span data-feather="code"></span>
                                 Sobre nós
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="./Creditos.php">
                                 <span data-feather="users"></span>
                                 Créditos
                             </a>
