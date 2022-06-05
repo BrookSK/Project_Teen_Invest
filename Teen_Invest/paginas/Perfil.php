@@ -14,41 +14,64 @@ session_start();
 
 <head>
     <title>Perfil</title>
+
     <link rel="icon" href="../Img/icones/favicon_io/favicon.ico">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <link href="../css/testeMenu.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
     <!--adicionando uma ligacao com o site para pegar icones-->
     <script src="https://kit.fontawesome.com/894395ce28.js" crossorigin="anonymous"></script>
-   <style type="text/css">
-       .icone{margin-top: 40px;}
-      
-   </style>
     
+    <style type="text/css">
+        .icone {
+            margin-top: 40px;
+        }
+    </style>
+
+    <!-- Vendor CSS Files -->
+    <link href="../vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
 </head>
+
+<body>
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="menu.php">
+        <img src="../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
+        <strong>Teen Invest</strong>
+    </a>
+</header>
 
 <div class="container">
     <div class="row">
         <div class="col-sm-10">
-            
-        <center><img src="../Img/Icones/user_1.png" alt="Icone" width="64px" height="64px" class="icone"><h1>Meu Perfil</h1></center>
+
+            <center><img src="../Img/Icones/user_2.png" alt="Icone" width="64px" height="64px" class="icone">
+                <h1>Meu Perfil</h1>
+            </center>
         </div>
     </div>
 
-    <div class="row">     
+    <div class="row">
 
         <!--/col-3-->
         <div class="col-sm-9">
             <ul class="nav">
-                <h4><li class="active"><a data-toggle="tab">Dados do Usuário</a></li></h4>
+                <h4>
+                    <li class="active"><a data-toggle="tab">Dados do Usuário</a></li>
+                </h4>
             </ul>
 
             <div class="tab-content">
                 <div class="tab-pane active" id="home">
-                    
+
                     <form name="Perfil" class="form" action="validacoes/passaDados.php" method="POST" id="registrationForm">
                         <div class="form-group">
 
@@ -124,9 +147,9 @@ session_start();
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <br>
-                                <input type="submit" name="alterar" class="btn btn-primary" value="Salvar alterações"></input>
+                                <input type="submit" name="alterar" class="btn btn-outline-primary" value="Salvar alterações"></input>
                                 <?php
-                                    echo "<a type='button' name='excluir' class='btn btn-danger' href=validacoes/excluiConta.php?id={$_SESSION["id"]}>Excluir conta</a>";
+                                echo "<a type='button' name='excluir' class='btn btn-outline-danger' href=validacoes/excluiConta.php?id={$_SESSION["id"]}>Excluir conta</a>";
                                 ?>
                             </div>
                         </div>
@@ -140,12 +163,8 @@ session_start();
     </div>
     <!--/tab-content-->
     <hr>
-    <footer class="text-muted py-5">
-        <div>
-            <p class="mb-1">
-                &copy; Copyright <span>Teen Invest</span>. Todos os direitos reservados
-            </p>
-        </div>
-    </footer>
+    <?php include "./View/template.php"; ?>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 </div>
 </div>
+</body>

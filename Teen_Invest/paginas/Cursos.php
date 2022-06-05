@@ -52,7 +52,7 @@
   <!-- Bootstrap core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
-  <link href="../css/menu.css" rel="stylesheet">
+  <link href="../css/testeMenu.css" rel="stylesheet">
   <link href="../css/cursos.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -76,9 +76,19 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <form class="" method="POST" action="validacoes/pesquisarCursos.php">
+    <!--<form class="" method="POST" action="validacoes/pesquisarCursos.php">
       <input class="form-control form-control-dark w-100" type="text" name="pesquisar" placeholder="Pesquisar">
       <input type="submit" value="Buscar">
+    </form> -->
+
+    <form class="search-box" method="POST" action="Cursos.php">
+      <div class="search-box">
+        <input type="text" class="search-text" name="pesquisar" placeholder="Pesquisar...">
+        <a class="search-btn" type="submit" value="Buscar">
+          <img class="loupe-blue" src="../Img/cursos/loupe-blue.svg" alt="" width="25px" height="25px">
+          <img class="loupe-white" src="../Img/cursos/loupe-white.svg" alt="" width="25px" height="25px">
+        </a>
+      </div>
     </form>
 
     <ul class="navbar-nav px-5">
@@ -157,6 +167,10 @@
 
           /*2-selecionando e pegando os dados que foram inseridos*/
           $comandoSql2 = "select * from tb_cursos order by id_curos desc";
+          
+          if(isset($_POST) && isset($_POST['pesquisar'])){
+            $comandoSql2 = "select * from tb_cursos where nome_cursos like '%{$_POST['pesquisar']}%' limit 5";
+          }
 
           /*3-conferendo tudo que foi inserido e colocando em uma variavel*/
           $resultado = mysqli_query($con, $comandoSql2);
@@ -169,11 +183,11 @@
             $preco = $dados["preco_cursos"];
             $link = $dados["link_cursos"];
             $img = $dados["img_cursos"];
-
+            
           ?>
             <div class="col">
               <div class="card shadow-sm">
-                <center><?php echo '<img src="../Img/cursos/' . $dados['img_cursos'] . '" width="70%" height="70%" alt="">'; ?>
+                <center><?php echo '<img src="../Img/cursos/' . $dados['img_cursos'] . '" width="270px" height="270px" alt="">'; ?>
                   <div class="card-body">
                     <p class="card-text txtValor"> <?php echo $nome ?></p>
                     <p><?php echo $descricao ?></p>
@@ -196,196 +210,6 @@
           <?php
           }
           ?>
-          <div class="col">
-            <div class="card shadow-sm">
-              <center><img src="../Img/cursos/FGV.png" width="70%" height="70%" alt="FGV">
-
-                <div class="card-body">
-                  <p class="card-text txtValor"> FGV – Como Gastar Conscientemente</p>
-                  <p>Público-alvo: Iniciantes<br>
-                    Carga horária: 8 horas<br>
-                    Formato: Online<br>
-                    Oferece certificado? Não</p>
-
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/como-gastar-conscientemente">
-                        <button type="button" class="btn btn-outline-secondary btnGraf">Começar</button>
-                      </a>
-
-                    </div>
-                    <small class="text txtGratis">Grátis</small>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <center><img src="../Img/cursos/Bradesco.png" width="70%" height="70%" alt="Fundação Bradesco">
-                <div class="card-body">
-                  <p class="card-text txtValor">Fundação Bradesco – Educação Financeira</p>
-                  <p>Público-alvo: Iniciantes<br>Carga horária: 4 horas<br>
-                    Formato: Online<br>Oferece certificado? Não informado</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://www.ev.org.br/cursos/educacao-financeira">
-                        <button type="button" class="btn btn-outline-secondary btnGraf">Começar</button>
-                      </a>
-                    </div>
-                    <small class="text txtGratis">Grátis</small>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <center><img src="../Img/cursos/serasa.png" width="70%" height="70%" alt="Serasa">
-
-                <div class="card-body">
-                  <p class="card-text txtValor">Serasa – Trilha Financeira</p>
-                  <p>Público-alvo: Iniciantes<br>Carga horária: não informado<br>Formato: Online<br>Oferece certificado? Sim</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://www.serasa.com.br/ensina/dicas/curso-trilha-financeira/">
-                        <button type="button" class="btn btn-outline-secondary btnGraf">Começar</button>
-                      </a>
-                    </div>
-                    <small class="text txtGratis">Grátis</small>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <center><img src="../Img/cursos/Lumina.png" width="70%" height="70%" alt="Lúmina">
-
-                <div class="card-body">
-                  <p class="card-text txtValor">Lúmina/UFRGS – Educação Financeira no Século XXI para a Liberdade Financeira</p>
-                  <p>Público-alvo: Iniciantes<br>
-                    Carga horária: 25 horas<br>
-                    Formato: Online<br>
-                    Oferece certificado? Sim<br><br></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://lumina.ufrgs.br/course/view.php?id=152">
-                        <button type="button" class="btn btn-outline-secondary btnGraf">Começar</button>
-                      </a>
-                    </div>
-                    <small class="text txtGratis">Grátis</small>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <center><img src="../Img/cursos/Udemy.png" width="70%" height="70%" alt="Udemy">
-
-                <div class="card-body">
-                  <p class="card-text txtValor">Udemy – Curso Completo de Educação Financeira</p>
-                  <p>
-                    Público-alvo: Iniciantes e iniciados no mundo das finanças pessoais e dos investimentos<br>
-                    Carga horária: 8 horas<br>
-                    Formato: Online<br>
-                    Oferece certificado? Sim</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://www.udemy.com/course/curso-completo-de-educacao-financeira/">
-                        <button type="button" class="btn btn-outline-secondary btnGraf">Começar</button>
-                      </a>
-                    </div>
-                    <small class="text txtValor">R$ 329,90</small>
-                  </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <center><img src="../Img/cursos/XPEED.png" width="70%" height="70%" alt="XPEED">
-
-                <div class="card-body">
-                  <p class="card-text txtValor">XPEED – Educação Financeira para Jovens</p>
-                  <p><br>
-                    Público-alvo: Iniciantes<br>
-                    Carga horária: 2 horas<br>
-                    Formato: Online<br>
-                    Oferece certificado? Sim<br><br>
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://xpeedschool.com.br/curso/educacao-financeira-para-jovens/?gclid=Cj0KCQiAq7COBhC2ARIsANsPATHhjZ98laZU_XAcdjqgWcHPQdHcNpkhEsV2UBiy2DcLeUJoLEpfr0EaAsywEALw_wcB">
-                        <button type="button" class="btn btn-outline-secondary btnGraf">Começar</button>
-                      </a>
-                    </div>
-                    <small class="text txtValor">R$ 68,00</small>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <center><img src="../Img/cursos/SENAT.png" width="70%" height="70%" alt="SEST SENAT">
-
-                <div class="card-body">
-                  <p class="card-text txtValor">EaD SEST SENAT – Educação Financeira</p>
-                  <p>
-                    Público-alvo: Iniciantes<br>
-                    Carga horária: 20 horas<br>
-                    Formato: Online<br>
-                    Oferece certificado? Não informado
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://ead.sestsenat.org.br/cursos/educacao-financeira/">
-                        <button type="button" class="btn btn-outline-secondary btnGraf">Começar</button>
-                      </a>
-                    </div>
-                    <small class="text txtGratis">Grátis</small>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <center><img src="../Img/cursos/Open.png" width="70%" height="70%" alt="OpenEdu">
-
-                <div class="card-body">
-                  <p class="card-text txtValor">OpenEdu</p>
-                  <p><br>Conteúdos práticos e objetivos, até mesmo pra quem já investe<br><br></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://goopen.com.br/edu">
-                        <button type="button" class="btn btn-outline-secondary btnGraf">Começar</button>
-                      </a>
-                    </div>
-                    <small class="text txtGratis">Grátis</small>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <center><img src="../Img/cursos/EV.G.png" width="70%" height="70%" alt="EV.G">
-
-                <div class="card-body">
-                  <p class="card-text txtValor">EV.G - Gestão de Finanças Pessoais</p>
-                  <p>
-                    Público-alvo: Jovens e adultos<br>
-                    Carga horária: 20 horas<br>
-                    Formato: Online<br>
-                    Oferece certificado? Sim
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://www.escolavirtual.gov.br/curso/170">
-                        <button type="button" class="btn btn-outline-secondary btnGraf">Começar</button>
-                      </a>
-                    </div>
-                    <small class="text txtGratis">Grátis</small>
-                  </div>
-                </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@
 <!-- Bootstrap core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/style.css" rel="stylesheet">
-<link href="../css/menu.css" rel="stylesheet">
+<link href="../css/testeMenu.css" rel="stylesheet">
 <link href="../css/cursos.css" rel="stylesheet">
 
 <!-- Vendor CSS Files -->

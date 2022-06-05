@@ -12,7 +12,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/menu.css" rel="stylesheet">
+  <link href="../css/testeMenu.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
 
   <style>
@@ -45,6 +45,11 @@
   </style>
   <link href="../css/informações.css" rel="stylesheet">
 
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 
 </head>
 
@@ -55,20 +60,6 @@
       <img src="../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
       <strong>Teen Invest</strong>
     </a>
-
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <ul class="navbar-nav px-5">
-      <li class="nav-item text-nowrap">
-        <a class="nav-link" href="">
-          <i class="fa-solid fa-arrow-right-from-bracket"></i>
-
-        </a>
-      </li>
-    </ul>
-
   </header>
 
   <main class="fundoT">
@@ -140,7 +131,7 @@
                 </div>
             </div>
           </div>
-          
+
           <div class="col">
             <div class="card shadow-sm">
               <center>

@@ -29,6 +29,8 @@ $e=$_POST["email"];
 $s=$_POST["senha"];
 $sc=$_POST["senhac"];
 
+if($s==$sc){
+
 /*1- definindo a conexao - local, usuario, senha e banco de dados*/
 include ("../../bd/conexao.php");
 
@@ -79,3 +81,4 @@ if($dados=mysqli_fetch_assoc($resultado)){
 
     header("Location: ../menu.php");
 }
+}else { echo "As senhas não são iguais"; }

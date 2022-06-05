@@ -10,6 +10,7 @@ $resultado_cursos = mysqli_query($con, $result_cursos);
 
 while($rows_cursos = mysqli_fetch_array($resultado_cursos)){
     echo "Nome do curso: ".$rows_cursos['nome_cursos']."<br>";
+    //include "../Cursos.php";
 }
 
 //var_dump($result_cursos);

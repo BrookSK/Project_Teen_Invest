@@ -73,7 +73,7 @@ session_start();
     <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Estilos personalizados para este modelo -->
-    <link href="../css/menu.css" rel="stylesheet">
+    <link href="../css/testeMenu.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="../css/style.css" rel="stylesheet">
@@ -86,13 +86,7 @@ session_start();
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
             <img src="../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
             <strong>Teen Invest</strong>
-        </a>
-
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <input class="form-control form-control-dark w-100" type="text" placeholder="Procurar" aria-label="Procurar">
+        </a>       
 
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
@@ -134,7 +128,7 @@ session_start();
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="./simulador/simulador.php">
                                 <span data-feather="bar-chart-2"></span>
                                 Simulador
                             </a>

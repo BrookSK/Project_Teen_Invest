@@ -10,7 +10,7 @@
     
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/menu.css" rel="stylesheet">
+    <link href="../../css/testeMenu.css" rel="stylesheet">
     
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <script src="../js/bootstrap.js"></script>
@@ -25,12 +25,14 @@
 
 <body>
 
+    <!-- https://newsapi.org/s/google-news-api -->
+
     <?php
-    $url = 'https://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=718ce93b25e0449a9d8abb0fd93d2e77';
-    $urlBTC = 'https://newsapi.org/v2/everything?q=bitcoin&apiKey=718ce93b25e0449a9d8abb0fd93d2e77';
-    $response = file_get_contents($url);
+    //$url = 'https://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=718ce93b25e0449a9d8abb0fd93d2e77';
+    $urlBTC = 'https://newsapi.org/v2/everything?q=bitcoin&from=2022-05-05&sortBy=publishedAt&apiKey=718ce93b25e0449a9d8abb0fd93d2e77';
+    //$response = file_get_contents($url);
     $responseBTC = file_get_contents($urlBTC);
-    $NewsData = json_decode($response);
+    //$NewsData = json_decode($response);
     $NewsDataBTC = json_decode($responseBTC);
 
     ?>
@@ -81,7 +83,7 @@
                 <h3>Cadastrar Notícia</h3>
             </div>
 
-            <form class="container-fluid" name="CadastraNoticia" action="validacoes/cadastraNoticia.php" method="POST" enctype="multipart/form-data">
+            <form class="container-fluid" name="cadastraNoticia" action="validacoes/cadastraNoticia.php" method="POST" enctype="multipart/form-data">
 
                 <div class="form mt-3">
                     <div>
@@ -138,7 +140,7 @@
 
             <div class="row NewsGrid">
                 <div class="col-md-3">
-                <?php echo '<img src="../Img/noticias/'.$dados['img_noticias'].'" alt="News Thumbnail" class="rounded">' ?>
+                <?php echo '<img src="../Img/noticias/'. $dados['img_noticias'] . '" alt="News Thumbnail" class="rounded">'; ?>
                 </div>
                 <div class="col-md-9">
                     <h2><?php echo $titulo ?></h2>

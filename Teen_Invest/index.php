@@ -238,7 +238,7 @@
                 <div class="member" data-aos="zoom-in" data-aos-delay="300">
                   <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
-                    <h4>Guilherme</h4>
+                    <h4>Guilherme Talhari Zanetti</h4>
                     <span>Aluno do 3º  de Desenvolvimento de Sistemas</span>
                     <div class="social">
                       <a href="https://twitter.com/"><i class="ri-twitter-fill"></i></a>
@@ -278,7 +278,7 @@
               <strong>Emails:</strong><br>
               lucas.vacari@etec.sp.gov.br<br>
               lucas.campagna@etec.sp.gov.br<br>
-              guilherme@etec.sp.gov.br<br>
+              guilherme.zanetti@etec.sp.gov.br<br>
             </p>
           </div>
 
