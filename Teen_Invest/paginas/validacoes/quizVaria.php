@@ -1,29 +1,8 @@
-﻿<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criação de Conta</title>
-    <script language="javascript" type="text/javascript">
-        function f_mostraDeu() {
-            alert("Calculos realizados com sucesso !");
-        }
-
-        function f_mostraNaoDeu() {
-            alert("Não foi possivel realizar os calculos !");
-        }
-    </script>
-</head>
-<body>
-    
-</body>
-</html>
-
-<?php
+﻿<?php
 
 /*1- definindo a conexao - local, usuario, senha e banco de dados*/
 include ("../../bd/conexao.php");
+include ("./resultquiz.php");
 
 /*pegando os dados vindos do formulario */
 $ni=$_POST["nivelInvestimento"];
@@ -69,10 +48,6 @@ switch ($tempo){
     break;
 }
 
-if($tempoINVEST == "0"){
-    $tempoINVEST = "1";
-}
-
 /*2-definindo o comando sql a ser usado */
 $comandoSql1="insert into tb_perfilInvestimento(tempo, valor)values('$tempoINVEST','$id')";
 
@@ -106,16 +81,6 @@ if ($dados2=mysqli_fetch_assoc($resultado2)){
     $mostraRecomendacoes = $dados2["descricao_recomendacoes"];
 }
 
-session_start();
-
-$_SESSION["nivelID"]=$nivelID;
-$_SESSION["riscoID"]=$riscoID;
-$_SESSION["nivelMIN"]=$nivelMIN;
-$_SESSION["nivelMAX"]=$nivelMAX;
-$_SESSION["tempoINVEST"]=$tempoINVEST;
-$_SESSION["aleatTEMP"]=$aleatTEMP;
-$_SESSION["mostraRecomendacoes"]=$mostraRecomendacoes;
-
 //if($id!="" || $nr!="" || $tempo!="" || $aleatTEMP!="" || $tempoINVEST!=""){
 //    var_dump($tempo);
 //    var_dump($aleatTEMP);
@@ -133,23 +98,8 @@ $_SESSION["mostraRecomendacoes"]=$mostraRecomendacoes;
 //    var_dump($dados);
 //    var_dump($dados1);
 //    var_dump($recomendacoes);
-//    var_dump($_SESSION);
 //    //var_dump($mostraRecomendacoes);
+//
 //    echo $mostraRecomendacoes;
 //    exit;
 //}
-
-/*3-executando o comando sql */ 
-/*4-conferindo se o registro foi inserido*/  
-if( mysqli_query($con, $comandoSql1) != true ){
-
-    echo '<script>f_mostraNaoDeu();</script>';
-    ?>
-        <script>
-	        window.location.href = "../menu.php";
-	    </script>
-	<?php
-}
-
-//include_once "../simulador/resultado.php";
-header("Location: ../simulador/resultado.php");

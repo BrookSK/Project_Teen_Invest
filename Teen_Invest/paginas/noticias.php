@@ -29,7 +29,7 @@
 
     <?php
     //$url = 'https://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=718ce93b25e0449a9d8abb0fd93d2e77';
-    $urlBTC = 'https://newsapi.org/v2/everything?q=bitcoin&from=2022-05-05&sortBy=publishedAt&apiKey=718ce93b25e0449a9d8abb0fd93d2e77';
+    $urlBTC = 'https://newsapi.org/v2/everything?q=bitcoin&from=2022-05-09&sortBy=publishedAt&apiKey=718ce93b25e0449a9d8abb0fd93d2e77';
     //$response = file_get_contents($url);
     $responseBTC = file_get_contents($urlBTC);
     //$NewsData = json_decode($response);

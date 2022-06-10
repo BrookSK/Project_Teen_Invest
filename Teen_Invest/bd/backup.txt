@@ -2,7 +2,7 @@ create database edfinanceira;
 use edfinanceira;
 
 CREATE TABLE `tb_cursos` (
-  `id_curos` int(11) NOT NULL,
+  `id_curos` int NOT NULL,
   `nome_cursos` varchar(100) NOT NULL,
   `descricao_cursos` varchar(255) NOT NULL,
   `preco_cursos` varchar(50) NOT NULL,
@@ -22,7 +22,7 @@ INSERT INTO `tb_cursos` (`id_curos`, `nome_cursos`, `descricao_cursos`, `preco_c
 (11, 'FGV – Como Gastar Conscientemente', '                  Público-alvo: Iniciantes<br>\r\n                  Carga horária: 8 horas<br>\r\n                  Formato: Online<br>\r\n                  Oferece certificado? Não\r\n                ', 'Grátis', 'https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/como-gastar-conscientemente', 'FGV.png');
 
 CREATE TABLE `tb_noticias` (
-  `id_noticias` int(11) NOT NULL,
+  `id_noticias` int NOT NULL,
   `titulo_noticias` varchar(100) NOT NULL,
   `descricao_noticias` varchar(255) NOT NULL,
   `autor_noticias` varchar(100) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE `tb_noticias` (
 );
 
 CREATE TABLE `tb_usuario` (
-  `id_usuario` int(11) NOT NULL,
+  `id_usuario` int NOT NULL,
   `primeironome_usuario` varchar(45) NOT NULL,
   `ultimonome_usuario` varchar(45) NOT NULL,
   `cpf_usuario` varchar(15) DEFAULT NULL,
@@ -80,34 +80,84 @@ ALTER TABLE `tb_usuario`
 -- AUTO_INCREMENT for table `tb_cursos`
 --
 ALTER TABLE `tb_cursos`
-  MODIFY `id_curos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_curos` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `tb_noticias`
 --
 ALTER TABLE `tb_noticias`
-  MODIFY `id_noticias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_noticias` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tb_usuario`
 --
 ALTER TABLE `tb_usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_usuario` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
   
+create table tb_perfilInvestimento(
+id_perfilInvestimento int not null auto_increment primary key,
+tempo bool not null,
+valor bool not null,
+codDoUsuario int,
+foreign key(codDoUsuario) references tb_usuario(id_usuario)
+);
+
+create table tb_nivelInvestimento(
+id_nivel int not null auto_increment primary key,
+descricao_nivel char(1),
+valormax_nivel char(15) not null,
+valormin_nivel char(15) not null
+);
+
+create table tb_nivelRisco(
+id_risco int not null auto_increment primary key,
+descricao_risco varchar(255) not null
+);
+
+create table tb_recomendacoes(
+descricao_recomendacoes varchar(255) not null,
+codDoInvestimento int,
+codDoRisco int,
+foreign key(codDoInvestimento) references tb_nivelInvestimento(id_nivel),
+foreign key(codDoRisco) references tb_nivelRisco(id_risco)
+);
+
+insert into tb_nivelInvestimento(descricao_nivel, valormax_nivel, valormin_nivel)values('D', '9999', '1000'),('C', '50000', '10000'),('B', '100000', '50001'),('A', '1000000', '100001');
+
+insert into tb_nivelRisco(descricao_risco)values('100% de chance de ganhar 10%'),('Possibilidade de ganhar entre 5% - 20%'),('Possibilidade de ganhar entre 0% - 25%'),('Possibilidade de perder 10% ou ganhar até 40%');
+
+insert into tb_recomendacoes(descricao_recomendacoes, codDoInvestimento, codDoRisco)values('petr4','1','1');
   
-desc tb_cursos;
-desc tb_noticias;
-desc tb_usuario;
+/*//desc tb_cursos;
+//desc tb_noticias;
+//desc tb_usuario;
 
-select * from tb_usuario;
+//select * from tb_usuario;
 
-select * from tb_cursos order by id_curos desc;
+//select * from tb_cursos order by id_curos desc;
 
-select * from tb_cursos;
+//select * from tb_cursos;
 
-select * from tb_noticias;
+//select * from tb_noticias;
 
-select * from tb_cursos where nome_cursos like "Por";
-
-
+//select * from tb_cursos where nome_cursos like "Por";
 
 
-//drop database edfinanceira;
+
+
+//drop database edfinanceira;*/
+
+/*select * from tb_nivelInvestimento where descricao_nivel='D';
+select * from tb_perfilInvestimento;
+select * from tb_nivelRisco;
+select * from tb_recomendacoes;
+select * from tb_nivelInvestimento;
+select * from tb_nivelInvestimento where descricao_nivel='C';
+select * from tb_nivelInvestimento where descricao_nivel='D';
+select * from tb_nivelRisco where descricao_risco='100% de chance de ganhar 10%';
+select * from tb_recomendacoes where codDoInvestimento='1' and codDoRisco='1';
+select * from tb_recomendacoes where codDoInvestimento='1' and codDoRisco='2';
+
+
+SELECT Tabela1.coluna1, Tabela1.coluna2, Tabela2.coluna1, Tabela2.coluna2 FROM Tabela1, Tabela2 WHERE Tabela1.chave_primaria = Tabela2.chave_estrangeira;
+select tb_recomendacoes.descricao_recomendacoes from tb_recomendacoes where tb_recomendacoes.codDoInvestimento='1' and tb_recomendacoes.codDoRisco='1';
+
+select tb_recomendacoes.descricao_recomendacoes from tb_recomendacoes where tb_recomendacoes.codDoInvestimento='1' and tb_recomendacoes.codDoRisco='1';*/
