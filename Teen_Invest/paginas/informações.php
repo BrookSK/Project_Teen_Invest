@@ -56,7 +56,7 @@
 <body>
 
   <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="menu.php">
+    <a class="navbar-brand" href="menu.php">
       <img src="../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
       <strong>Teen Invest</strong>
     </a>
