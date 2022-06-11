@@ -117,6 +117,8 @@ while($achou == false){
 //var_dump($_SESSION);
 //var_dump($conta);
 
+$number = number_format($rendimentoINVEST,2,',','.');
+
 ?>
 
 <title>Perfil de Investimento | Teen Invest</title>
@@ -167,7 +169,7 @@ while($achou == false){
             <b><h1 class="texte">Olá, Investidor!</h1></b>
         </div><br><br><br>
         <div>
-            <h3>O seu patrimônio simulado será de <b><?php echo $rendimentoINVEST ?></b>, em <b><?php echo $conta ?></b> ano<?php if($conta > 1){echo "s";} ?>.</h3>
+            <h3>O seu patrimônio simulado será de <b><?php echo $number ?></b>, em <b><?php echo $conta ?></b> ano<?php if($conta > 1){echo "s";} ?>.</h3>
         </div><br><br><br>
         <div>
             <h3>Seu perfil de investidor é <b><?php echo $caracteristicas ?></b></h3><br><br>

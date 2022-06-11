@@ -4,6 +4,16 @@
 <title>Suporte</title>
 <link rel="icon" href="../Img/icones/favicon_io/favicon.ico">
 
+<script language="javascript" type="text/javascript">
+  function f_mostraDeu() {
+    alert("Mensagem enviada com sucesso !");
+  }
+
+  function f_mostraNaoDeu() {
+    alert("Não foi possivel enviar a mensagem !");
+  }
+</script>
+
 <!-- Bootstrap core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/style.css" rel="stylesheet">
@@ -56,26 +66,26 @@
       <div class="row">
         <!-- Contact Form -->
         <div class="contact-form col-12 col-md-6  mx-auto">
-          <form id="contact-form" method="post" action="sendmail.php" role="form">
+          <form id="contact-form" method="post" action="menu.php" role="form">
 
             <div class="form-group">
-              <input type="text" placeholder="Seu Nome" class="form-control" name="name" id="name"><br>
+              <input type="text" placeholder="Seu Nome" class="form-control" name="name" id="name" required="required"><br>
             </div>
 
             <div class="form-group">
-              <input type="email" placeholder="Seu Email" class="form-control" name="email" id="email"><br>
+              <input type="email" placeholder="Seu Email" class="form-control" name="email" id="email" required="required"><br>
             </div>
 
             <div class="form-group">
-              <input type="text" placeholder="Assunto" class="form-control" name="subject" id="subject"><br>
+              <input type="text" placeholder="Assunto" class="form-control" name="subject" id="subject" required="required"><br>
             </div>
 
             <div class="form-group">
-              <textarea rows="6" placeholder="Digite sua mensagem" class="form-control" name="message" id="message"></textarea><br>
+              <textarea rows="6" placeholder="Digite sua mensagem" class="form-control" name="message" id="message" required="required"></textarea><br>
             </div>
 
             <div id="cf-submit">
-              <input placeholder="" class="btn btn-outline-primary" type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar">
+              <input placeholder="" class="btn btn-outline-primary" type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar" onclick="f_mostraDeu()">
             </div>
           </form>
         </div>

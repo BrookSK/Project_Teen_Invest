@@ -129,7 +129,7 @@ session_start();
                                     <label for="cpf">
                                         <h4>CPF</h4>
                                     </label>
-                                    <input type="text" class="form-control" name="cpf" value="<?php echo $_SESSION['cpf'] ?>" required="required" title="Digite seu CPF" placeholder="000.000.000-00">
+                                    <input type="text" class="form-control" name="cpf" value="<?php echo $_SESSION['cpf'] ?>" title="Digite seu CPF" placeholder="000.000.000-00">
                                 </div>
                             </div>
 
@@ -139,7 +139,7 @@ session_start();
                                     <label for="phone">
                                         <h4>Telefone</h4>
                                     </label>
-                                    <input type="text" class="form-control" name="telefone" value="<?php echo $_SESSION['t'] ?>" required="required" title="Digite seu telefone" placeholder="(00) 0000-0000">
+                                    <input type="text" class="form-control" name="telefone" value="<?php echo $_SESSION['t'] ?>" title="Digite seu telefone" placeholder="(00) 0000-0000">
                                 </div>
                             </div>
 
@@ -149,7 +149,7 @@ session_start();
                                     <label for="nascimento">
                                         <h4>Nascimento</h4>
                                     </label>
-                                    <input class="form-control input-md" type="date" maxlength="10" name="nascimento" value="<?php echo $_SESSION['n'] ?>" required="required" placeholder="DD/MM/AAAA" title="Digite sua data de nascimento" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                                    <input class="form-control input-md" type="date" maxlength="10" name="nascimento" value="<?php echo $_SESSION['n'] ?>" placeholder="DD/MM/AAAA" title="Digite sua data de nascimento" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
                                 </div>
                             </div>
 
