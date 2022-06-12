@@ -40,7 +40,7 @@
     
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
   <div class="container-fluid">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="menu.php">
+    <a class="navbar-brand" href="menu.php">
       <img src="../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
       <strong>Teen Invest</strong>
     <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">

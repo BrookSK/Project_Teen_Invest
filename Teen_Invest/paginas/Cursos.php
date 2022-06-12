@@ -10,6 +10,10 @@
   <title>Cursos</title>
   <link rel="icon" href="../Img/icones/favicon_io/favicon.ico">
 
+  <?php
+    session_start();
+  ?>
+
   <script language="javascript" type="text/javascript">
     function f_mostraDeu() {
       alert("Curso inserido com sucesso !");
@@ -17,6 +21,14 @@
 
     function f_mostraNaoDeu() {
       alert("Não foi possivel a inserção do curso !");
+    }
+
+    function validaExcluir() {
+      resp = window.confirm("Deseja realmente excluir o curso ?");
+
+      if(resp==true){
+        window.location.href = "validacoes/excluiCursos.php?id={<?php $_SESSION["id_curso"] ?>}";
+      }
     }
   </script>
 
@@ -67,7 +79,7 @@
 
 <body>
   <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="menu.php">
+    <a class="navbar-brand" href="menu.php">
       <img src="../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
       <strong>Teen Invest</strong>
     </a>
@@ -113,9 +125,7 @@
 
     <div class="fundoE album py-5">
       <?php
-
-      session_start();
-
+      
       if ($_SESSION["tipo"] == "admin") {
       ?>
         <div class="container">
@@ -172,12 +182,18 @@
             $comandoSql2 = "select * from tb_cursos where nome_cursos like '%{$_POST['pesquisar']}%' limit 5";
           }
 
+          $comandoSql3 = "select max(id_curos) from tb_cursos";
+
           /*3-conferendo tudo que foi inserido e colocando em uma variavel*/
           $resultado = mysqli_query($con, $comandoSql2);
 
+          $resultado1 = mysqli_query($con, $comandoSql3);
+
+          if($dados1 = mysqli_fetch_assoc($resultado1)){
+            $_SESSION["id_curso"] = $dados1["max(id_curos)"];
+          }
+
           while ($dados = mysqli_fetch_assoc($resultado)) {
-            $id = $dados["id_curos"];
-            $_SESSION["id_curso"] = $dados["id_curos"];
             $nome = $dados["nome_cursos"];
             $descricao = $dados["descricao_cursos"];
             $preco = $dados["preco_cursos"];
@@ -197,7 +213,7 @@
                           <button type="button" class="btn btn-outline-secondary btnGraf">Começar</button>
                           <?php
                           if ($_SESSION["tipo"] == "admin") {
-                            echo "<a type='button' name='excluir' class='btn btn-danger' href=validacoes/excluiCursos.php?id={$_SESSION["id_curso"]}>Excluir curso</a>";
+                            echo "<a type='button' name='excluir' class='btn btn-danger' onclick=validaExcluir()>Excluir curso</a>";
                           }
                           ?>
                         </a>

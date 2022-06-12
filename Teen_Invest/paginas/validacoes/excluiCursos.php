@@ -40,7 +40,7 @@ if($resultado==true){
     header("Location: ../menu.php");
 }else{
 
-    var_dump($id);
+    var_dump($idInserido);
     var_dump($sql);
     var_dump($_SESSION);
     exit;
