@@ -1,6 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
 
+<?php
+    session_start();
+?>
+
+<script language="javascript" type="text/javascript">
+    function validaExcluir() {
+      resp = window.confirm("Deseja realmente excluir a notícia ?");
+
+      if(resp==true){
+        window.location.href = "validacoes/excluiNoticias.php?id={<?php $_SESSION["id_noticias"] ?>}";
+      }
+    }
+</script>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +43,7 @@
 
     <?php
     //$url = 'https://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=718ce93b25e0449a9d8abb0fd93d2e77';
-    $urlBTC = 'https://newsapi.org/v2/everything?q=bitcoin&from=2022-05-05&sortBy=publishedAt&apiKey=718ce93b25e0449a9d8abb0fd93d2e77';
+    $urlBTC = 'https://newsapi.org/v2/everything?q=bitcoin&from=2022-05-12&sortBy=publishedAt&apiKey=718ce93b25e0449a9d8abb0fd93d2e77';
     //$response = file_get_contents($url);
     $responseBTC = file_get_contents($urlBTC);
     //$NewsData = json_decode($response);
@@ -73,8 +87,6 @@
 -->
 
     <?php
-
-    session_start();
 
     if ($_SESSION["tipo"] == "admin") {
     ?>
@@ -153,7 +165,7 @@
                     &nbsp;
                     <?php
                     if ($_SESSION["tipo"] == "admin") {
-                        echo "<a type='button' name='excluir' class='btn btn-outline-danger' href=validacoes/excluiNoticias.php?id={$_SESSION["id_noticias"]}>Excluir notícia</a>";
+                        echo "<a type='button' name='excluir' class='btn btn-outline-danger' onclick=validaExcluir()>Excluir notícia</a>";
                     }
                     ?>
                 </div>

@@ -55,7 +55,7 @@
 <body>
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="menu.php">
+    <a class="navbar-brand" href="menu.php">
       <img src="../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
       <strong>Teen Invest</strong>
     </a>
@@ -118,6 +118,12 @@
       <div class="d-flex text-muted pt-3">
         <img src="../Img/Criadores/professores.png" width="32" height="32">
         <p class="pb-3 mb-0 small lh-sm border-bottom">
+          <strong class="d-block text-gray-dark">. Ailton Tenani Pauluci</strong>
+        </p>
+      </div>
+      <div class="d-flex text-muted pt-3">
+        <img src="../Img/Criadores/professores.png" width="32" height="32">
+        <p class="pb-3 mb-0 small lh-sm border-bottom">
           <strong class="d-block text-gray-dark">. Alex Bueno</strong>
         </p>
       </div>
@@ -130,13 +136,43 @@
       <div class="d-flex text-muted pt-3">
         <img src="../Img/Criadores/professores.png" width="32" height="32">
         <p class="pb-3 mb-0 small lh-sm border-bottom">
+          <strong class="d-block text-gray-dark">. Ana Carolina Lisboa Martins Ferrrari</strong>
+        </p>
+      </div>
+      <div class="d-flex text-muted pt-3">
+        <img src="../Img/Criadores/professores.png" width="32" height="32">
+        <p class="pb-3 mb-0 small lh-sm border-bottom">
           <strong class="d-block text-gray-dark">. André Furlan</strong>
         </p>
       </div>
       <div class="d-flex text-muted pt-3">
         <img src="../Img/Criadores/professores.png" width="32" height="32">
         <p class="pb-3 mb-0 small lh-sm border-bottom">
+          <strong class="d-block text-gray-dark">. Bruno Duarte Sartori</strong>
+        </p>
+      </div>
+      <div class="d-flex text-muted pt-3">
+        <img src="../Img/Criadores/professores.png" width="32" height="32">
+        <p class="pb-3 mb-0 small lh-sm border-bottom">
           <strong class="d-block text-gray-dark">. Caroline Dalbon Reis</strong>
+        </p>
+      </div>      
+      <div class="d-flex text-muted pt-3">
+        <img src="../Img/Criadores/professores.png" width="32" height="32">
+        <p class="pb-3 mb-0 small lh-sm border-bottom">
+          <strong class="d-block text-gray-dark">. Fabiana Cota Pontes</strong>
+        </p>
+      </div>
+      <div class="d-flex text-muted pt-3">
+        <img src="../Img/Criadores/professores.png" width="32" height="32">
+        <p class="pb-3 mb-0 small lh-sm border-bottom">
+          <strong class="d-block text-gray-dark">. Gustavo de Cadastro Morande</strong>
+        </p>
+      </div>
+      <div class="d-flex text-muted pt-3">
+        <img src="../Img/Criadores/professores.png" width="32" height="32">
+        <p class="pb-3 mb-0 small lh-sm border-bottom">
+          <strong class="d-block text-gray-dark">. Humberto Cecconi</strong>
         </p>
       </div>
       <div class="d-flex text-muted pt-3">
@@ -148,7 +184,13 @@
       <div class="d-flex text-muted pt-3">
         <img src="../Img/Criadores/professores.png" width="32" height="32">
         <p class="pb-3 mb-0 small lh-sm border-bottom">
-          <strong class="d-block text-gray-dark">. Humberto Cecconi</strong>
+          <strong class="d-block text-gray-dark">. Rosana Regina Gomes Marcelino</strong>
+        </p>
+      </div>
+      <div class="d-flex text-muted pt-3">
+        <img src="../Img/Criadores/professores.png" width="32" height="32">
+        <p class="pb-3 mb-0 small lh-sm border-bottom">
+          <strong class="d-block text-gray-dark">. Valter Canizares filho</strong>
         </p>
       </div>
       <small class="d-block text-end mt-3">

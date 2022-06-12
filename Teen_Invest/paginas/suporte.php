@@ -4,6 +4,21 @@
 <title>Suporte</title>
 <link rel="icon" href="../Img/icones/favicon_io/favicon.ico">
 
+<script language="javascript" type="text/javascript">
+  function v1(){
+    if(form1.name.value=="" && form1.email.value=="" && form1.subject.value=="" && form1.message.value==""){
+      window.alert("Preencha todos os campos.");
+    }else{f_mostraDeu();}
+  }
+  function f_mostraDeu() {
+    alert("Mensagem enviada com sucesso !");
+  }
+
+  function f_mostraNaoDeu() {
+    alert("Não foi possivel enviar a mensagem !");
+  }
+</script>
+
 <!-- Bootstrap core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/style.css" rel="stylesheet">
@@ -22,7 +37,7 @@
 <body>
 
   <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="menu.php">
+    <a class="navbar-brand" href="menu.php">
       <img src="../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
       <strong>Teen Invest</strong>
     </a>
@@ -56,26 +71,26 @@
       <div class="row">
         <!-- Contact Form -->
         <div class="contact-form col-12 col-md-6  mx-auto">
-          <form id="contact-form" method="post" action="sendmail.php" role="form">
+          <form id="form1" name="form1" method="post" action="menu.php" role="form">
 
             <div class="form-group">
-              <input type="text" placeholder="Seu Nome" class="form-control" name="name" id="name"><br>
+              <input type="text" placeholder="Seu Nome" class="form-control" name="name" id="name" required="required"><br>
             </div>
 
             <div class="form-group">
-              <input type="email" placeholder="Seu Email" class="form-control" name="email" id="email"><br>
+              <input type="email" placeholder="Seu Email" class="form-control" name="email" id="email" required="required"><br>
             </div>
 
             <div class="form-group">
-              <input type="text" placeholder="Assunto" class="form-control" name="subject" id="subject"><br>
+              <input type="text" placeholder="Assunto" class="form-control" name="subject" id="subject" required="required"><br>
             </div>
 
             <div class="form-group">
-              <textarea rows="6" placeholder="Digite sua mensagem" class="form-control" name="message" id="message"></textarea><br>
+              <textarea rows="6" placeholder="Digite sua mensagem" class="form-control" name="message" id="message" required="required"></textarea><br>
             </div>
 
             <div id="cf-submit">
-              <input placeholder="" class="btn btn-outline-primary" type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar">
+              <input placeholder="" class="btn btn-outline-primary" type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar" onclick="v1()">
             </div>
           </form>
         </div>

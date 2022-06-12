@@ -146,67 +146,11 @@
 </section>
 <!--====  End of Privacy Policy  ====-->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+<!--============================
+=            Footer            =
+=============================-->
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Teen Invest</h3>
-            <p>
-              Etec Philadelpho Gouvea Netto <br>
-              São José do Rio Preto, 15035-010 <br>
-              Avenida dos Estudantes, Nº3278<br>
-              Brasil <br><br>
-              <strong>Emails:</strong><br>
-              lucas.vacari@etec.sp.gov.br<br>
-              lucas.campagna@etec.sp.gov.br<br>
-              guilherme@etec.sp.gov.br<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/suporte/perguntas.php">Perguntas frequentes</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacidade.php">Políticas de Privacidade</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/politicas/termos.php">Termos de uso</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/suporte.php">Suporte</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/creditos.php">Créditos</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="../../index.php">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../../index.php#about">Sobre</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../../index.php#services">Serviços</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../../index.php#team">Criadores</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/Login.php">Faça login</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../../paginas/CriarConta.php">Crie sua conta</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Teen Invest</span></strong>. Todos os direitos reservados
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/ -->
-          Projetado por <a href="https://bootstrapmade.com/">BootstrapMade</a>. Editado por <a href="#team">Teen Invest</a>
-        </div>
-      
-  </footer><!-- End Footer -->
-
+<?php include "../View/template.php"; ?>
 
   <!-- To Top -->
   <div class="scroll-top-to">

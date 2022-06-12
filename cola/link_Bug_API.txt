@@ -1,0 +1,1 @@
+https://newsapi.org/v2/everything?q=bitcoin&from=2022-05-12&sortBy=publishedAt&apiKey=718ce93b25e0449a9d8abb0fd93d2e77
