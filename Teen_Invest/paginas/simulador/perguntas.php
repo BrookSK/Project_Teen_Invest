@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
 
-<title>Suporte</title>
+<title>Perfil de Investimento | Teen Invest</title>
 <link rel="icon" href="../../Img/icones/favicon_io/favicon.ico">
 
 <!-- Bootstrap core CSS -->
@@ -19,16 +19,38 @@
 <link href="../../vendor/remixicon/remixicon.css" rel="stylesheet">
 <link href="../../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+<script>
+  /*Função validar*/
+  function validar(){
+    if(document.simulador.nivelInvestimento[0].checked == false && document.simulador.nivelInvestimento[1].checked == false && document.simulador.nivelInvestimento[2].checked == false && document.simulador.nivelInvestimento[3].checked == false){
+      alert('Por favor, selecione o quanto você deseja investir.');
+      return false;
+    }if(document.simulador.tempo[0].checked == false && document.simulador.tempo[1].checked == false && document.simulador.tempo[2].checked == false && document.simulador.tempo[3].checked == false){
+      alert('Por favor, selecione quando você quer resgatar seu investimento.');
+      return false;
+    }if(document.simulador.nivelRisco[0].checked == false && document.simulador.nivelRisco[1].checked == false && document.simulador.nivelRisco[2].checked == false && document.simulador.nivelRisco[3].checked == false){
+      alert('Por favor, selecione qual mais te atende em relação as suas expectativas com o investimento.');
+      return false;
+    }
+    return true;
+  }
+</script>
+
 <body>
 
+<?php
+ini_set('display_errors', true);
+error_reporting(E_ALL);
+?>
+
   <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="menu.php">
+      <a class="navbar-brand" href="../menu.php">
           <img src="../../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
           <strong>Teen Invest</strong>
       </a>
   </header>
   <div class="col-12 col-md-6  mx-auto">
-      <form id="simulador" method="post" action="../validacoes/resultquiz.php" role="form">
+      <form id="simulador" name="simulador" action="../validacoes/resultquiz.php" method="POST" onSubmit="return validar();">
 
         <br>
 
@@ -41,18 +63,18 @@
         <br>
 
         <label for="tempo">Quando você quer resgatar seu investimento?</label><br><br>
-        <input type="radio" name="tempo" value="1ano">1 Ano ou menos<br>
-        <input type="radio" name="tempo" value="2anos">2-3 Ano<br>
-        <input type="radio" name="tempo" value="4anos">4-5 Anos<br>
-        <input type="radio" name="tempo" value="6anos">6 Ano<br>
+        <input type="radio" name="tempo" value="1 Ano ou menos">1 Ano ou menos<br>
+        <input type="radio" name="tempo" value="2-3 Anos">2-3 Anos<br>
+        <input type="radio" name="tempo" value="4-5 Anos">4-5 Anos<br>
+        <input type="radio" name="tempo" value="6 Anos">6 Anos<br>
 
         <br>
 
         <label for="nivelRisco">Quais das opções abaixo, qual mais te atende em relação as suas expectativas com o investimento?</label><br><br>
-        <input type="radio" name="nivelRisco" value="possibilidade1">100% de chance de ganhar 10%<br>
-        <input type="radio" name="nivelRisco" value="possibilidade2">Possibilidade de ganhar entre 5% - 20%<br>
-        <input type="radio" name="nivelRisco" value="possibilidade3">Possibilidade de ganhar entre 0% - 25%<br>
-        <input type="radio" name="nivelRisco" value="possibilidade4">Possibilidade de perder 10% ou ganhar até 40%<br>
+        <input type="radio" name="nivelRisco" value="100% de chance de ganhar 10%">100% de chance de ganhar 10%<br>
+        <input type="radio" name="nivelRisco" value="Possibilidade de ganhar entre 5% - 20%">Possibilidade de ganhar entre 5% - 20%<br>
+        <input type="radio" name="nivelRisco" value="Possibilidade de ganhar entre 0% - 25%">Possibilidade de ganhar entre 0% - 25%<br>
+        <input type="radio" name="nivelRisco" value="Possibilidade de perder 10% ou ganhar até 40%">Possibilidade de perder 10% ou ganhar até 40%<br>
 
         <div id="cf-submit">
           <input class="btn btn-outline-primary" type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar">

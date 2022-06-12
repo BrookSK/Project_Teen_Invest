@@ -83,7 +83,7 @@ session_start();
 <body>
 
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
+        <a class="navbar-brand" href="#">
             <img src="../Img/Logo/teste2.png" width="43px" height="23%" alt="Logo do Site">&nbsp &nbsp
             <strong>Teen Invest</strong>
         </a>       
@@ -207,10 +207,6 @@ session_start();
                                 [
                                     "Tesla",
                                     "NASDAQ:TSLA|1D"
-                                ],
-                                [
-                                    "Petróleo ",
-                                    "EUREX:PBRF1!|1D"
                                 ]
                             ],
                             "chartOnly": false,
