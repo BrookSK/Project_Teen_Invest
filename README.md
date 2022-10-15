@@ -30,3 +30,8 @@ Project Developers:
 Lucas Vacari: https://github.com/BrookSK
 Lucas Mendes: https://github.com/M4lakoi
 Guilherme: https://github.com/Zanetti-Creator
+
+Warning: The project was finished and was delivered to the bank. The project has been approved by the bank and no updates will be made to the project.
+
+Last update date: June 12, 2022
+Date of delivery and presentation of the TCC: June 13, 2022
