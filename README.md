@@ -7,8 +7,8 @@ Project description:<br>
 The project is ongoing with the aim of helping teenagers to have a better financial education and encourage them to take care of their money.
 
 Project Status:<br>
-The project is currently in initial production.<br>
-Date of the latest project version: April.
+The project is currently finished.<br>
+Date of last version of the project: June 12, 2022.
 
 Technologies used:<br>
 Github, Visual Studio Code, Eclipse PHP, Wampserver.
