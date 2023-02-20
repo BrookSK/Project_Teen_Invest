@@ -3,6 +3,10 @@ Course completion project
 
 All rights reserved to the authors.
 
+All rights reserved.
+
+All contributors and developers have approved the publication of this project.
+
 Project description:<br>
 The project is ongoing with the aim of helping teenagers to have a better financial education and encourage them to take care of their money.
 
