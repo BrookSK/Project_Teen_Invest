@@ -8,7 +8,7 @@ All rights reserved.
 All contributors and developers have approved the publication of this project.
 
 Project description:<br>
-The project is ongoing with the aim of helping teenagers to have a better financial education and encourage them to take care of their money.
+The project aims to help teenagers to have a better financial education and encourage them to take care of their money, bringing financial news and stock quotes, foreign currencies and cryptocurrencies.
 
 Project Status:<br>
 The project is currently finished.<br>
